@@ -5,146 +5,287 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f1e7;
-  color: #2b2b2b;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #111;
 }
 
-/* Navigatie */
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
+  height: 75px;
   width: 100%;
-  background-color: #8b0000;
-  padding: 18px 50px;
+  background: #111;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 60px;
 }
 
 .logo {
   color: white;
-  font-size: 26px;
-  font-weight: bold;
   text-decoration: none;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 
 .nav-links {
   display: flex;
-  gap: 35px;
+  align-items: center;
+  gap: 40px;
   list-style: none;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: bold;
-  transition: 0.2s;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .nav-links a:hover {
-  color: #ffd166;
+  color: #e21b2d;
 }
 
-/* Pagina */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 30px;
-}
+/* =========================
+   HERO
+========================= */
 
-main h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: #8b0000;
-}
-
-main p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Homepagina */
-
-.home {
-  padding-bottom: 80px;
+.home-page {
+  min-height: 100vh;
 }
 
 .hero {
-  text-align: center;
-  padding: 70px 20px 50px;
+  min-height: 500px;
+  background: #e21b2d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 10%;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-small {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: 48px;
-  color: #8b0000;
-  margin-bottom: 15px;
+  font-size: 85px;
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -4px;
 }
 
-.hero p {
-  font-size: 20px;
-  color: #555;
+.hero h1 span {
+  color: #111;
 }
+
+.hero-text {
+  font-size: 19px;
+  margin-top: 25px;
+  max-width: 450px;
+}
+
+.order-button {
+  margin-top: 30px;
+  padding: 16px 30px;
+  background: #111;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background: white;
+  color: #111;
+}
+
+.hero-pizza {
+  font-size: 230px;
+  transform: rotate(-12deg);
+  margin-right: 50px;
+}
+
+/* =========================
+   CATEGORIEËN
+========================= */
 
 .categories {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 30px;
+  padding: 80px 10%;
+  background: #f5f5f5;
 }
 
-.categories h2 {
+.section-heading {
   text-align: center;
-  font-size: 32px;
-  color: #8b0000;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
+
+.section-heading p {
+  color: #e21b2d;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+/* =========================
+   CATEGORY CARDS
+========================= */
 
 .category-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 20px;
 }
 
 .category-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 35px 25px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-}
-
-.category-icon {
-  font-size: 55px;
-  margin-bottom: 15px;
-}
-
-.category-card h3 {
-  font-size: 23px;
-  color: #8b0000;
-  margin-bottom: 15px;
-}
-
-.category-card p {
-  color: #555;
-  margin-bottom: 25px;
-}
-
-.category-card button {
-  background-color: #8b0000;
+  min-height: 330px;
+  position: relative;
+  overflow: hidden;
   color: white;
-  border: none;
-  padding: 12px 22px;
-  border-radius: 6px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 20%,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.vegetarian {
+  background: #388e3c;
+}
+
+.meat {
+  background: #8b1e1e;
+}
+
+.fish {
+  background: #1769aa;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+
+.card-content > span {
+  font-size: 13px;
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+.card-content h3 {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.card-content p {
   font-size: 15px;
+  line-height: 1.5;
+  max-width: 280px;
+  margin-bottom: 20px;
+}
+
+.card-content button {
+  border: none;
+  background: white;
+  color: #111;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 900;
   cursor: pointer;
 }
 
-.category-card button:hover {
-  background-color: #a50000;
+.card-content button:hover {
+  background: #e21b2d;
+  color: white;
 }
 
-/* Mobiel */
-@media (max-width: 800px) {
+/* =========================
+   MOBIEL
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .hero-pizza {
+    font-size: 150px;
+    margin-right: 0;
+  }
+
   .category-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    min-height: 600px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero-pizza {
+    display: none;
+  }
+
+  .categories {
+    padding: 60px 20px;
   }
 }

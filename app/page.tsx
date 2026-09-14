@@ -5,42 +5,70 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="home">
+      <main className="home-page">
         <section className="hero">
-          <h1>Sopranos Pizza</h1>
-          <p>De lekkerste pizza's, vers bereid voor jou.</p>
+          <div className="hero-content">
+            <p className="hero-small">SOPRANOS PIZZA</p>
+
+            <h1>
+              PIZZA
+              <br />
+              <span>MADE RIGHT.</span>
+            </h1>
+
+            <p className="hero-text">
+              Vers uit de oven. Krokante bodem. Veel smaak.
+            </p>
+
+            <button className="order-button">
+              BESTEL NU →
+            </button>
+          </div>
+
+          <div className="hero-pizza">
+            🍕
+          </div>
         </section>
 
         <section className="categories">
-          <h2>Onze pizza's</h2>
+          <div className="section-heading">
+            <p>ONZE MENUKAART</p>
+            <h2>KIES JE PIZZA</h2>
+          </div>
 
           <div className="category-grid">
 
-            <div className="category-card">
-              <div className="category-icon">🥬</div>
-              <h3>Vegetarische pizza</h3>
-              <p>
-                Heerlijke pizza's met verse groenten en zonder vlees.
-              </p>
-              <button>Bekijk pizza's</button>
+            <div className="category-card vegetarian">
+              <div className="card-content">
+                <span>🥬</span>
+                <h3>VEGETARISCH</h3>
+                <p>
+                  Verse groenten, kaas en heerlijke Italiaanse smaken.
+                </p>
+                <button>BEKIJK PIZZA'S →</button>
+              </div>
             </div>
 
-            <div className="category-card">
-              <div className="category-icon">🥩</div>
-              <h3>Vlees pizza</h3>
-              <p>
-                Smaakvolle pizza's met verschillende soorten vlees.
-              </p>
-              <button>Bekijk pizza's</button>
+            <div className="category-card meat">
+              <div className="card-content">
+                <span>🥩</span>
+                <h3>VLEES</h3>
+                <p>
+                  Voor de echte liefhebber van een stevige pizza.
+                </p>
+                <button>BEKIJK PIZZA'S →</button>
+              </div>
             </div>
 
-            <div className="category-card">
-              <div className="category-icon">🐟</div>
-              <h3>Vis pizza</h3>
-              <p>
-                Lekkere pizza's met vis en andere verse ingrediënten.
-              </p>
-              <button>Bekijk pizza's</button>
+            <div className="category-card fish">
+              <div className="card-content">
+                <span>🐟</span>
+                <h3>VIS</h3>
+                <p>
+                  Verse vis gecombineerd met onze beste ingrediënten.
+                </p>
+                <button>BEKIJK PIZZA'S →</button>
+              </div>
             </div>
 
           </div>
