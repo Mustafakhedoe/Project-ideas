@@ -40,7 +40,6 @@ export default function Home() {
 
             <div className="category-card vegetarian">
               <div className="card-content">
-                <span>🥬</span>
                 <h3>VEGETARISCH</h3>
                 <p>
                   Verse groenten, kaas en heerlijke Italiaanse smaken.
@@ -51,7 +50,6 @@ export default function Home() {
 
             <div className="category-card meat">
               <div className="card-content">
-                <span>🥩</span>
                 <h3>VLEES</h3>
                 <p>
                   Voor de echte liefhebber van een stevige pizza.
@@ -62,7 +60,6 @@ export default function Home() {
 
             <div className="category-card fish">
               <div className="card-content">
-                <span>🐟</span>
                 <h3>VIS</h3>
                 <p>
                   Verse vis gecombineerd met onze beste ingrediënten.
