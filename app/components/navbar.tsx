@@ -13,6 +13,10 @@ export default function Navbar() {
         </li>
 
         <li>
+          <Link href="/pizzas">Pizzas</Link>
+        </li>
+
+        <li>
           <Link href="/contact">Contact</Link>
         </li>
 

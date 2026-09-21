@@ -1,4 +1,5 @@
 import Navbar from "@/app/components/navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,9 +21,9 @@ export default function Home() {
               Vers uit de oven. Krokante bodem. Veel smaak.
             </p>
 
-            <button className="order-button">
+            <Link href="/pizzas" className="order-button">
               BESTEL NU →
-            </button>
+            </Link>
           </div>
 
           <div className="hero-pizza">
@@ -44,7 +45,7 @@ export default function Home() {
                 <p>
                   Verse groenten, kaas en heerlijke Italiaanse smaken.
                 </p>
-                <button>BEKIJK PIZZA'S →</button>
+                <Link href="/pizzas" className="category-cta">BEKIJK PIZZA'S →</Link>
               </div>
             </div>
 
@@ -54,7 +55,7 @@ export default function Home() {
                 <p>
                   Voor de echte liefhebber van een stevige pizza.
                 </p>
-                <button>BEKIJK PIZZA'S →</button>
+                <Link href="/pizzas" className="category-cta">BEKIJK PIZZA'S →</Link>
               </div>
             </div>
 
@@ -64,7 +65,7 @@ export default function Home() {
                 <p>
                   Verse vis gecombineerd met onze beste ingrediënten.
                 </p>
-                <button>BEKIJK PIZZA'S →</button>
+                <Link href="/pizzas" className="category-cta">BEKIJK PIZZA'S →</Link>
               </div>
             </div>
 
