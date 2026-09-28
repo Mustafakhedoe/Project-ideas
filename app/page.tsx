@@ -12,9 +12,8 @@ export default function Home() {
             <p className="hero-small">SOPRANOS PIZZA</p>
 
             <h1>
-              PIZZA
-              <br />
-              <span>MADE RIGHT.</span>
+              <span className="hero-word hero-word-light">PIZZA</span>
+              <span className="hero-word hero-word-dark">MADE RIGHT.</span>
             </h1>
 
             <p className="hero-text">
@@ -22,12 +21,18 @@ export default function Home() {
             </p>
 
             <Link href="/pizzas" className="order-button">
-              BESTEL NU →
+              BESTEL NU <span>→</span>
             </Link>
           </div>
 
-          <div className="hero-pizza">
-            🍕
+          <div className="hero-visual" aria-hidden="true">
+            <div className="pizza-shadow" />
+            <div className="pizza-slice">
+              <span className="ingredient ingredient-1" />
+              <span className="ingredient ingredient-2" />
+              <span className="ingredient ingredient-3" />
+              <span className="ingredient ingredient-4" />
+            </div>
           </div>
         </section>
 
