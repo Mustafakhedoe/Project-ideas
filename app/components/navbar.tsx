@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CartBadge from "@/app/components/CartBadge";
 
 export default function Navbar() {
   return (
@@ -22,6 +23,10 @@ export default function Navbar() {
 
         <li>
           <Link href="/login">Inloggen</Link>
+        </li>
+
+        <li>
+          <CartBadge />
         </li>
       </ul>
     </nav>

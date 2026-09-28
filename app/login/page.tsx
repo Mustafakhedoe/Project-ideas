@@ -1,22 +1,33 @@
 "use client";
 
-import React, { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { Suspense, useState } from "react";
 import Navbar from "@/app/components/navbar";
 
-export default function Login() {
+function LoginContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const orderPlaced = searchParams.get("orderPlaced") === "1";
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+
     if (!email || !password) {
       setError("Vul e-mail en wachtwoord in.");
       return;
     }
-    // TODO: call auth API
-    setError("Inloggen niet geconfigureerd in demo.");
+
+    const valid = email === "bakker@sopranos.nl" && password === "pizza123";
+    if (!valid) {
+      setError("Ongeldige bakkerlogin. Gebruik: bakker@sopranos.nl / pizza123");
+      return;
+    }
+
+    router.push("/bakker");
   };
 
   return (
@@ -32,6 +43,10 @@ export default function Login() {
               <p className="lead">Log in om je bestellingen te beheren.</p>
             </div>
           </div>
+
+          {orderPlaced && (
+            <p className="success">Bestelling geplaatst. Log in om de bakkerstatus te bekijken.</p>
+          )}
 
           <form onSubmit={submit} className="login-form">
             <label className="field">
@@ -54,5 +69,13 @@ export default function Login() {
         </div>
       </main>
     </>
+  );
+}
+
+export default function Login() {
+  return (
+    <Suspense fallback={<div className="login-page"><div className="login-card"><p>Login laden...</p></div></div>}>
+      <LoginContent />
+    </Suspense>
   );
 }
