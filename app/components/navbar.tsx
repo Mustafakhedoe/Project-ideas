@@ -18,6 +18,14 @@ export default function Navbar() {
         </li>
 
         <li>
+          <Link href="/producten?category=drank">Dranken</Link>
+        </li>
+
+        <li>
+          <Link href="/producten?category=ijs">IJs</Link>
+        </li>
+
+        <li>
           <Link href="/contact">Contact</Link>
         </li>
 
