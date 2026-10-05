@@ -14,7 +14,7 @@ export const drinks: MenuProduct[] = [
     category: "drank",
     description: "Klassiek, koud en verfrissend.",
     price: 2.5,
-    image: "/images/pizzas/cola.png",
+    image: "/images/drankjes/coca-cola.png",
   },
   {
     id: "fanta",
@@ -22,7 +22,7 @@ export const drinks: MenuProduct[] = [
     category: "drank",
     description: "Fruitige citrus smaak voor bij je pizza.",
     price: 2.5,
-    image: "/images/pizzas/fanta.png",
+    image: "/images/drankjes/fanta.png",
   },
   {
     id: "water",
@@ -30,7 +30,7 @@ export const drinks: MenuProduct[] = [
     category: "drank",
     description: "Fris en licht, perfect bij elke maaltijd.",
     price: 1.7,
-    image: "/images/pizzas/water.png",
+    image: "/images/drankjes/spa.png",
   },
   {
     id: "ice-tea",
@@ -38,7 +38,7 @@ export const drinks: MenuProduct[] = [
     category: "drank",
     description: "Verfrissende thee met een subtiele zoetheid.",
     price: 3.0,
-    image: "/images/pizzas/icedtea.png",
+    image: "/images/drankjes/ice tea.png",
   },
 ];
 
